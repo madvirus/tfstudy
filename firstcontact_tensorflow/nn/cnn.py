@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
-
+import os
 from tensorflow.examples.tutorials.mnist import input_data
-mnist = input_data.read_data_sets('MNIST_data', one_hot=True)
+
+mnistPath = os.path.join(os.path.expanduser('~'), 'MNIST_data')
+mnist = input_data.read_data_sets(mnistPath, one_hot=True)
 import tensorflow as tf
 from datetime import datetime, timedelta
 
